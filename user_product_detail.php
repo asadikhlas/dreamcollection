@@ -82,7 +82,7 @@ $id = $_GET['id'];
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
-									<li><a href="userwomen.php">Women's</a></li>
+									<li><a href="userwomen.php">Women & Bridal</a></li>
 									<li><a href="usermen.php">Men's</a></li>
                                     <li><a href="userkid.php">Kid's</a></li>
 								</ul>
@@ -157,7 +157,7 @@ $id = $_GET['id'];
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="userallproduct.php">All Products</a></li>
-						<li><a href="userwomen.php">Women's</a></li>
+						<li><a href="userwomen.php">Women & Bridal</a></li>
 						<li><a href="usermen.php">Men's</a></li>
                         <li><a href="userkid.php">kid's</a></li>
 					</ul>

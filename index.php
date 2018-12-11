@@ -46,7 +46,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="#" class="logo">
-						<img src="images/icons/logo-02.png" alt="IMG-LOGO">
+						<img src="images/icons/logo2.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -60,7 +60,7 @@
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
-									<li><a href="userwomen.php">Women's</a></li>
+									<li><a href="userwomen.php">Women & Bridal</a></li>
 									<li><a href="usermen.php">Men's</a></li>
                                     <li><a href="userkid.php">Kid's</a></li>
 								</ul>
@@ -117,7 +117,7 @@
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="userallproduct.php">All Products</a></li>
-						<li><a href="userwomen.php">Women's</a></li>
+						<li><a href="userwomen.php">Women & Bridal</a></li>
 						<li><a href="usermen.php">Men's</a></li>
                         <li><a href="userkid.php">kid's</a></li>
 					</ul>
@@ -149,7 +149,7 @@
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
 								<span class="ltext-202 txt-center cl0 respon2">
-									Women Collection 2018
+									Women & Bridal Collection 2018
 								</span>
 							</div>
 								
@@ -234,7 +234,7 @@
 						<a href="userwomen.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Women
+									Women & Bridal
 								</span>
 							</div>
 

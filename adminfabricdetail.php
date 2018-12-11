@@ -166,27 +166,19 @@ $obj->set_post_category($_POST['category']);
 	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-            <div class="top-bar">
+         	<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
+							0314-2304355
 						</a>
 					</div>
 				</div>
@@ -207,7 +199,7 @@ $obj->set_post_category($_POST['category']);
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="adminallproduct.php">All Products</a></li>
-									<li><a href="adminwomens.php">Women's</a></li>
+									<li><a href="adminwomens.php">Women & Bridal</a></li>
 									<li><a href="adminmen.php">Men's</a></li>
                                     <li><a href="adminkid.php">Kid's</a></li>
 								</ul>
@@ -275,29 +267,22 @@ $obj->set_post_category($_POST['category']);
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
+			
 	<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 				</li>
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
+                                0314-2304355
 						</a>
 					</div>
 				</li>
@@ -307,7 +292,7 @@ $obj->set_post_category($_POST['category']);
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="adminallproduct.php">All Products</a></li>
-						<li><a href="adminwomens.php">Women's</a></li>
+						<li><a href="adminwomens.php">Women's & Bridal's</a></li>
 						<li><a href="adminmen.php">Men's</a></li>
                         <li><a href="adminkid.php">Men's</a></li>
 					</ul>
@@ -384,11 +369,11 @@ $obj->set_post_category($_POST['category']);
 
 						<div class="bor8 m-b-20 how-pos4-parent">
                             
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" required="" pattern="[a-z A-Z]{3,15}" maxlength="15" placeholder="Enter Fabric Name">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" required="" pattern="[a-z A-Z 0-9]{3,15}" maxlength="15" placeholder="Enter Fabric Name">
 						</div>
                         <label>Fabric type</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" required="" maxlength="20" pattern="[a-z A-Z0-9]{3,20}" type="text" name="type" placeholder="Enter Fabric Type">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" required="" maxlength="20" pattern="[a-z A-Z 0-9]{3,20}" type="text" name="type" placeholder="Enter Fabric Type">
 						</div>
                         <label>Fabric Price</label>
 						<div class="bor8 m-b-20 how-pos4-parent">
@@ -400,7 +385,7 @@ $obj->set_post_category($_POST['category']);
                       <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                       <select name="category" id="" class="form-control">
                         <option selected="" value="">Select Category</option>
-                        <option value="Women">Women's</option>
+                        <option value="Women">Women & Bridal</option>
                         <option value="Men">Men's</option>
                         <option value="Kid">Kid's</option>
                         

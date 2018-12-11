@@ -1,6 +1,5 @@
 <?php 
 include 'conn.php';
-
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +40,7 @@ include 'conn.php';
 </head>
 <body class="animsition">
 
-<!-- Header -->
+	<!-- Header -->
 	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
@@ -82,7 +81,7 @@ include 'conn.php';
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
-									<li><a href="userwomen.php">Women's</a></li>
+									<li><a href="userwomen.php">Women & Bridal</a></li>
 									<li><a href="usermen.php">Men's</a></li>
                                     <li><a href="userkid.php">Kid's</a></li>
 								</ul>
@@ -157,7 +156,7 @@ include 'conn.php';
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="userallproduct.php">All Products</a></li>
-						<li><a href="userwomen.php">Women's</a></li>
+						<li><a href="userwomen.php">Women & Bridal</a></li>
 						<li><a href="usermen.php">Men's</a></li>
                         <li><a href="userkid.php">kid's</a></li>
 					</ul>
@@ -183,7 +182,7 @@ include 'conn.php';
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 
-					<h1><b>Men's Fabrics</b></h1>
+					<h1><b>Mens's Fabrics</b></h1>
 
 					
 
@@ -201,27 +200,60 @@ include 'conn.php';
 				<!-- Search product -->
 				<div class="dis-none panel-search w-full p-t-10 p-b-15">
 					<div class="bor8 dis-flex p-l-15">
-						<form action="" method="get">
-						<div class="hidden-submit"><input type="submit" name="submitBtn" tabindex="-1"/></div>
+					<form action="" method="get">
+						<div class="hidden-submit"><input type="submit" value="" name="submitBtn" tabindex="-1"/></div>
 						<i class="zmdi zmdi-search" style="display: inline-block;"></i>
-					<input class="mtext-107 cl2 size-114 plh2 p-r-15" name="inputTxt" style="display: inline-block;" type="text" name="search-product" placeholder="Search">
+					<input class="mtext-107 cl2 size-114 plh2 p-r-300" name="inputTxt" style="display: inline-block;" type="text" pattern="[a-z A-Z 0-9]{3,15}" maxlength="15" name="search-product" placeholder="Search">
 					</form>
 					</div>	
 				</div>
 
             </div>
-<div class="row isotope-grid">
+
             <?php
                     $conn = connect::connected();
                     if(!(isset($_GET['inputTxt']))){
                     	$_GET['inputTxt'] = "";
-					}
-					$input = $_GET['inputTxt'];
-                      $q = "SELECT DISTINCT (p.postId),p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE p.postCategory = 'men' AND postName LIKE '%$input%' GROUP BY p.postId";
-        		$res = $conn->query($q); 
-       			while($data = $res->fetch_assoc()){
-            //connect::debug($res);   
-			//$conn = connect::connected();
+                    }
+                    $input = $_GET['inputTxt'];
+                    
+                      $q = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE p.postCategory = 'men' AND  postName LIKE '%$input%' GROUP BY p.postId";
+        			$res = $conn->query($q); 
+      				 
+           			 //connect::debug($res);
+      				 	$row = $res->num_rows;
+      				 	//Result Shown per page
+                      $resultsPerPage = 16;
+
+                      //Determining the no of page going to be shown
+                      $noOfPages = ceil($row / $resultsPerPage);
+
+                      //Getting current page number
+                      if((!(isset($_GET['page']))) OR $_GET['page'] < 1){
+                        $currentPage = 1;
+                      }elseif ($_GET['page'] > $noOfPages) {
+                          $currentPage = $noOfPages;
+                      }
+                      else{
+                        $currentPage = $_GET["page"];
+                      }
+
+                      //Algorithum for getting page rows from database
+                      $pageStartingRow = ($currentPage - 1) * $resultsPerPage;
+
+                      //Query for getting limitrd result according to pagination
+                      $q1 = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE p.postCategory = 'men' AND postName LIKE '%$input%' GROUP BY p.postId LIMIT $pageStartingRow, $resultsPerPage;";
+                      $res1 = $conn->query($q1);
+				if($row >= 1){
+                        echo "<p class='mb-4' style='height:30px; width: 100%; color: white; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #717fe0;' >About $row Ads Found. Viewing $currentPage of $noOfPages Pages.</p><br><br>";
+                      }else{
+                          echo "<p class='mb-4' style='height:30px; width: 100%; color: white; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #717fe0;' >Oops.. No Ad Found.</p><br><br>";
+                          //die();
+                      }
+                      if($row > 0){
+                 echo "<div class='row isotope-grid'>";
+                    while($data = $res1->fetch_assoc()){
+                    	
 				echo "<div class='col-sm-6 col-md-8 col-lg-3 p-b-35 isotope-item men' >";
 					echo "<div class='block2'>";
 						echo "<div class='block2-pic hov-img0'>";
@@ -242,7 +274,7 @@ include 'conn.php';
 									RS: $data[postPrice]
 								</span>";
 							echo "</div>";
-                    echo "<div class='block2-txt-child2 flex-r p-t-3'>";
+                         echo "<div class='block2-txt-child2 flex-r p-t-3'>";
                             echo "<p class='stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6'>
 									$data[postType]
 								</p>";
@@ -252,15 +284,69 @@ include 'conn.php';
 				echo "</div>";
        
                                       }
+                        }      
+                        ?>
 
-?>
 
-            </div>
 
+					
+            	
+			</div><br><?php
+         //pagination code
+            //current page = active page (the page we are viewing right now)
+            if($noOfPages > 1){ //pagination would show when total pages($noOfPages) are greater then 1... 
+              $prevPage = $currentPage - 1; //contain previus page..
+
+              echo "<div><nav aria-label='Page navigation example'>
+					  <ul class='pagination justify-content-center'>";
+              if($currentPage > 1){ //if current page is greater then 1 then < (precious page indicator) would show.
+                echo "<li class='page-item' style='background-color:#717fe0; border-color:#717fe0'>
+				      <a class='page-link' style='color:#717fe0'; href='usermen.php?page=$prevPage' aria-label='Previous'>
+				        <span aria-hidden='true'>&laquo;</span>
+				        <span class='sr-only' >Previous</span>
+				      </a>
+				    </li>";
+              }else{
+              	echo "<li class='page-item disabled' >
+				      <a class='page-link' style='color:#717fe0;' href='usermen.php?page=$prevPage' aria-label='Previous' >
+				        <span aria-hidden='true'>&laquo;</span>
+				        <span class='sr-only'>Previous</span>
+				      </a>
+				    </li>";
+              }
+              //that 1 contain how much button would show before current  page (1,2,current page)..
+              if($currentPage >= 1){ //if current page is greater then 1 then previous page number would show.
+                for($page=$currentPage - 1; $page<= $currentPage + 1; $page++){//looping throgh page buttons.
+                  if($currentPage == $page){//making current page active(current page)
+                    //echo "current";
+                        echo "<li class='page-item active' style='background-color:#717fe0; border-color:#717fe0'><a class='page-link' style='background-color:#717fe0;'>$page</a></li>";
+                  }else{//non active pages
+                      if($page > 0 AND $page <= $noOfPages){//controls the nonactive page
+                        //agr page 0 se km ho ga or noOfPages se ziada ho ga to show nhi kare ga..
+                      echo "<li class='page-item'><a class='page-link' href='usermen.php?page=$page'>$page</a></li>";
+                    }  
+                  }
+                }
+
+              }
+              //if noOfPages is greater then 1 and current page is less then total pages then > (next page indicator) would show.
+              if($noOfPages > 1 AND $currentPage < $noOfPages){
+                $nextPage = $currentPage + 1;
+                echo "<a class='page-link' style='color:#717fe0;' href='usermen.php?page=$nextPage' aria-label='Next'>
+				        <span aria-hidden='true'>&raquo;</span>
+				        <span class='sr-only'>Next</span>
+				      </a>
+				    </li>";
+              }
+            }
+          ?>    
+          </ul>
+			</nav>
+		</div>
         </div>
     </div>
     
-	<?php include "includes/footer.php"; ?>
+<?php include "includes/footer.php"; ?>
 
 
 	<!-- Back to top -->
@@ -269,8 +355,8 @@ include 'conn.php';
 			<i class="zmdi zmdi-chevron-up"></i>
 		</span>
 	</div>
-    
-    
+
+	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

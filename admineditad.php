@@ -66,27 +66,19 @@ if(!(isset($_SESSION['AID']))){
 	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-            <div class="top-bar">
+            	<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
+							0314-2304355
 						</a>
 					</div>
 				</div>
@@ -107,7 +99,7 @@ if(!(isset($_SESSION['AID']))){
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="adminallproduct.php">All Products</a></li>
-									<li><a href="adminwomens.php">Women's</a></li>
+									<li><a href="adminwomens.php">Women & Bridal</a></li>
 									<li><a href="adminmen.php">Men's</a></li>
                                     <li><a href="adminkid.php">Kid's</a></li>
 								</ul>
@@ -175,29 +167,21 @@ if(!(isset($_SESSION['AID']))){
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-	<ul class="topbar-mobile">
+<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 				</li>
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
+                                0314-2304355
 						</a>
 					</div>
 				</li>
@@ -207,7 +191,7 @@ if(!(isset($_SESSION['AID']))){
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="adminallproduct.php">All Products</a></li>
-						<li><a href="adminwomens.php">Women's</a></li>
+						<li><a href="adminwomens.php">Women & Bridal</a></li>
 						<li><a href="adminmen.php">Men's</a></li>
                         <li><a href="adminkid.php">Men's</a></li>
 					</ul>
@@ -314,9 +298,9 @@ if(!(isset($_SESSION['AID']))){
                             echo "<option value='Men'>Men's</option>";
                           }
                           if($r['postCategory'] == "Women"){
-                            echo "<option selected='' value='women'>Women's</option>";
+                            echo "<option selected='' value='women'>Women & Bridal</option>";
                           }else{
-                            echo "<option value='women'>Women's</option>";
+                            echo "<option value='women'>Women & Bridal</option>";
                           }
                           if($r['postCategory'] == "Kid"){
                             echo "<option selected='' value='Kid'>Kid's</option>";

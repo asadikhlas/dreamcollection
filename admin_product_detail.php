@@ -51,24 +51,16 @@ $id = $_GET['id'];
             <div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
+							0314-2304355
 						</a>
 					</div>
 				</div>
@@ -89,7 +81,7 @@ $id = $_GET['id'];
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="adminallproduct.php">All Products</a></li>
-									<li><a href="adminwomens.php">Women's</a></li>
+									<li><a href="adminwomens.php">Women & Bridal</a></li>
 									<li><a href="adminmen.php">Men's</a></li>
                                     <li><a href="adminkid.php">Kid's</a></li>
 								</ul>
@@ -160,26 +152,18 @@ $id = $_GET['id'];
 	<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 				</li>
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
+                                0314-2304355
 						</a>
 					</div>
 				</li>
@@ -189,7 +173,7 @@ $id = $_GET['id'];
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="adminallproduct.php">All Products</a></li>
-						<li><a href="adminwomens.php">Women's</a></li>
+						<li><a href="adminwomens.php">Women & Bridal</a></li>
 						<li><a href="adminmen.php">Men's</a></li>
                         <li><a href="adminkid.php">Men's</a></li>
 					</ul>
@@ -328,9 +312,12 @@ $id = $_GET['id'];
                          <?php
 							echo "<a href='admineditad.php?adId=$id'><button class='flex-c-m stext-101 cl0 size-121 bg1 bor1 hov-btn1 p-lr-15 trans-04'>Edit This Ad</button></a>";
                             ?>
-                            <br>
-                            <br>
-						      
+                       <br>
+						       <?php
+							echo "<a href='admin_dlt_ad.php?adId=$id'><button class='flex-c-m stext-101 cl0 size-121 bg1 bor1 hov-btn1 p-lr-15 trans-04'>Delete This Ad</button></a>";
+                            ?>
+                        <br>
+                        <br>
 				 <p  style="text-align: right;"><?php echo $data['postDate']; ?></p><p style="text-align: right;">Viewers:  <?php echo $data['postViews'];  ?> </p>
 					</div>
                          <div class="flex-w flex-m p-l-100 p-t-40 respon7">

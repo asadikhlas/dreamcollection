@@ -81,7 +81,7 @@ include 'conn.php';
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
-									<li><a href="userwomen.php">Women's</a></li>
+									<li><a href="userwomen.php">Women & Bridal</a></li>
 									<li><a href="usermen.php">Men's</a></li>
                                     <li><a href="userkid.php">Kid's</a></li>
 								</ul>
@@ -156,7 +156,7 @@ include 'conn.php';
 					<a href="#">Products</a>
 					<ul class="sub-menu-m">
 						<li><a href="userallproduct.php">All Products</a></li>
-						<li><a href="userwomen.php">Women's</a></li>
+						<li><a href="userwomen.php">Women & Bridal</a></li>
 						<li><a href="usermen.php">Men's</a></li>
                         <li><a href="userkid.php">kid's</a></li>
 					</ul>
@@ -201,9 +201,9 @@ include 'conn.php';
 				<div class="dis-none panel-search w-full p-t-10 p-b-15">
 					<div class="bor8 dis-flex p-l-15">
 					<form action="" method="get">
-						<div class="hidden-submit"><input type="submit" name="submitBtn" tabindex="-1"/></div>
+						<div class="hidden-submit"><input type="submit" value="" name="submitBtn" tabindex="-1"/></div>
 						<i class="zmdi zmdi-search" style="display: inline-block;"></i>
-					<input class="mtext-107 cl2 size-114 plh2 p-r-15" name="inputTxt" style="display: inline-block;" type="text" name="search-product" placeholder="Search">
+					<input class="mtext-107 cl2 size-114 plh2 p-r-300" name="inputTxt" style="display: inline-block;" type="text" pattern="[a-z A-Z 0-9]{3,15}" maxlength="15" name="search-product" placeholder="Search">
 					</form>
 					</div>	
 				</div>
@@ -217,7 +217,7 @@ include 'conn.php';
                     }
                     $input = $_GET['inputTxt'];
                     
-                      $q = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE postName LIKE '%$input%' GROUP BY p.postId";
+                      $q = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE   postName LIKE '%$input%' GROUP BY p.postId";
         			$res = $conn->query($q); 
       				 
            			 //connect::debug($res);
@@ -245,9 +245,9 @@ include 'conn.php';
                       $q1 = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE postName LIKE '%$input%' GROUP BY p.postId LIMIT $pageStartingRow, $resultsPerPage;";
                       $res1 = $conn->query($q1);
 				if($row >= 1){
-                        echo "<p class='mb-4' style='height:30px; width: 100%; color: black; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #11cbd7;' >About $row Ads Found. Viewing $currentPage of $noOfPages Pages.</p><br><br>";
+                        echo "<p class='mb-4' style='height:30px; width: 100%; color: white; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #717fe0;' >About $row Ads Found. Viewing $currentPage of $noOfPages Pages.</p><br><br>";
                       }else{
-                          echo "<p class='mb-4' style='height:30px; width: 100%; color: black; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #11cbd7;' >Oops.. No Ad Found.</p><br><br>";
+                          echo "<p class='mb-4' style='height:30px; width: 100%; color: white; text-align: center; border-radius: 6px; margin-bottom: 12px; background-color: #717fe0;' >Oops.. No Ad Found.</p><br><br>";
                           //die();
                       }
                       if($row > 0){
@@ -291,7 +291,7 @@ include 'conn.php';
 
 					
             	
-			</div><?php
+			</div><br><?php
          //pagination code
             //current page = active page (the page we are viewing right now)
             if($noOfPages > 1){ //pagination would show when total pages($noOfPages) are greater then 1... 
@@ -300,15 +300,15 @@ include 'conn.php';
               echo "<div><nav aria-label='Page navigation example'>
 					  <ul class='pagination justify-content-center'>";
               if($currentPage > 1){ //if current page is greater then 1 then < (precious page indicator) would show.
-                echo "<li class='page-item'>
-				      <a class='page-link' href='userallproduct.php?page=$prevPage' aria-label='Previous'>
+                echo "<li class='page-item' style='background-color:#717fe0; border-color:#717fe0'>
+				      <a class='page-link' style='color:#717fe0'; href='userallproduct.php?page=$prevPage' aria-label='Previous'>
 				        <span aria-hidden='true'>&laquo;</span>
-				        <span class='sr-only'>Previous</span>
+				        <span class='sr-only' >Previous</span>
 				      </a>
 				    </li>";
               }else{
-              	echo "<li class='page-item disabled'>
-				      <a class='page-link' href='userallproduct.php?page=$prevPage' aria-label='Previous'>
+              	echo "<li class='page-item disabled' >
+				      <a class='page-link' style='color:#717fe0;' href='userallproduct.php?page=$prevPage' aria-label='Previous' >
 				        <span aria-hidden='true'>&laquo;</span>
 				        <span class='sr-only'>Previous</span>
 				      </a>
@@ -319,7 +319,7 @@ include 'conn.php';
                 for($page=$currentPage - 1; $page<= $currentPage + 1; $page++){//looping throgh page buttons.
                   if($currentPage == $page){//making current page active(current page)
                     //echo "current";
-                        echo "<li class='page-item active'><a class='page-link'>$page</a></li>";
+                        echo "<li class='page-item active' style='background-color:#717fe0; border-color:#717fe0'><a class='page-link' style='background-color:#717fe0;'>$page</a></li>";
                   }else{//non active pages
                       if($page > 0 AND $page <= $noOfPages){//controls the nonactive page
                         //agr page 0 se km ho ga or noOfPages se ziada ho ga to show nhi kare ga..
@@ -332,7 +332,7 @@ include 'conn.php';
               //if noOfPages is greater then 1 and current page is less then total pages then > (next page indicator) would show.
               if($noOfPages > 1 AND $currentPage < $noOfPages){
                 $nextPage = $currentPage + 1;
-                echo "<a class='page-link' href='userallproduct.php?page=$nextPage' aria-label='Next'>
+                echo "<a class='page-link' style='color:#717fe0;' href='userallproduct.php?page=$nextPage' aria-label='Next'>
 				        <span aria-hidden='true'>&raquo;</span>
 				        <span class='sr-only'>Next</span>
 				      </a>
@@ -346,7 +346,7 @@ include 'conn.php';
         </div>
     </div>
     
-<?php //include "includes/footer.php"; ?>
+<?php include "includes/footer.php"; ?>
 
 
 	<!-- Back to top -->

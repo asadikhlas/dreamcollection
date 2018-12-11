@@ -2,7 +2,7 @@
 include "conn.php";
 session_start();
 if(isset($_SESSION['AID'])){
-  header("location: adminfabricdetail.php");
+  header("location: adminallproduct.php");
 }
  ?>
 
