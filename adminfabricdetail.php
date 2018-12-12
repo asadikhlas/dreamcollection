@@ -56,8 +56,8 @@ class Post{
         return $this->postDesc;
     }
     public function upload_image(){
+      $id = $_SESSION['user'];
       $conn = connect::connected();
-
       $q = "SELECT `postId` FROM `postad` ORDER BY `postId` DESC";
       $res = $conn->query($q);
       $datadb = $res->fetch_assoc();
@@ -66,11 +66,29 @@ class Post{
       $files = $_FILES['files'];
       //connect::debug($files);
       $fileCount = count($_FILES['files']['name']);
+      $fileFormat = $_FILES['files']['type'];
+      $fileSize = $_FILES['files']['size'];
+      //connect::debug($fileFormat);
+      $arry = array('image/png', 'image/jpeg', 'image/PNG', 'image/JPEG', 'image/jpg', 'image/JPG');
+      foreach ($fileSize as $key => $value) { 
+        if($value > 2097152){
+          echo "<script>window.location='adminallproduct.php?submit=size';</script>";
+          die();
+          //echo "invalid format: ".$value;
+        }
+      }
+      foreach ($fileFormat as $key => $value) { 
+        if(!(in_array($value, $arry))){
+          echo "<script>window.location='adminallproduct.php?submit=formatError';</script>";
+          die();
+          //echo "invalid format: ".$value;
+        }
+      }
       if($fileCount > 5){
-        echo "<script>window.location='adminfabricdetail.php?submit=imgGreater';</script>";
+        echo "<script>window.location='adminallproduct.php?submit=imgGreater';</script>";
         die;
       }elseif($fileCount < 3){
-        echo "<script>window.location='adminfabricdetail.php?submit=imgLesser';</script>";
+        echo "<script>window.location='adminallproduct.php?submit=imgLesser';</script>";
         die;
       }
             
@@ -86,6 +104,7 @@ class Post{
         $unique = uniqid().'.jpg';
         $tempname = $value['tmp_name'];
         $imgname = $value['name'];
+        
         if(move_uploaded_file($tempname, 'PostImg/'.$unique)){
             $q = "INSERT INTO `images`(`postId`, `image`) VALUES ($postId, '$unique')";
             if(connect::connection($q)){
@@ -93,11 +112,11 @@ class Post{
             }
         }
         else{
-            echo "<script>window.location = 'adminallproduct.php?submit=fail';</script>";
+            echo "<script>window.location = 'uadminallproduct.php?submit=fail';</script>";
             die();
         }
       }
-      echo "<script>window.location = 'adminallproduct.php?submit=success';</script>";
+      echo "<script>window.location = 'uadminallproduct.php?submit=success';</script>";
       //$q = ""
     }
     
@@ -397,7 +416,7 @@ $obj->set_post_category($_POST['category']);
                          <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" required="" pattern="[a-z A-Z.0-9]{3,550}" maxlength="550" class="form-control py-2"  name="desc"></textarea>
                             </div>
                         <p>Choose any three Fabric Images</p><BR>
-                         <input type="file" name="files[]" id="files" accept=".jpg, .png" multiple="" required="required"/>
+                         <input type="file" name="files[]" id="files" accept=".jpg, .png, .PNG, .JPG" multiple="" required="required"/>
 
                         <br><br>
 						<input class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit" value="submit" name="submit">

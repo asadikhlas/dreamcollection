@@ -235,7 +235,9 @@ if(isset($_GET['submit']) == false){
           }
       elseif($_GET['submit'] == "Updated"){
                   echo "<div class='alert alert-success' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Your Ad Has Been Updated Successfully.</div><br>";
-          }
+          }elseif($_GET['submit'] == "formatError"){
+        echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Selected File Has Invalid Format.. Only png And jpeg Formats Are Supported!</div><br>";
+    	  }
           ?>
 
 	<!-- Product -->
