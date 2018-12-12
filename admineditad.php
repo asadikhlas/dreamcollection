@@ -5,6 +5,11 @@ session_start();
 if(!(isset($_SESSION['AID']))){
     header("location: adminlogin.php");
 }
+if(!(isset($_GET['adId'])) || $_GET['adId'] == ""){
+	header("location: adminallproduct.php");
+}else{
+	$id = $_GET['adId'];
+}
 //$conn = connect::connected();
 ?>
 

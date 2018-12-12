@@ -4,7 +4,11 @@ session_start();
 if(!(isset($_SESSION['AID']))){
     header("location: adminlogin.php");
 }
-$id = $_GET['id'];
+if(!(isset($_GET['id'])) || $_GET['id'] == ""){
+	header("location: adminallproduct.php");
+}else{
+	$id = $_GET['id'];
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -224,6 +228,11 @@ $id = $_GET['id'];
                       
                       
                       $res = $conn->query($q);
+                      $row = $res->num_rows;
+                      if(!($row > 0 )){
+                      	echo "<script>window.alert('Unable to find requested ad')</script>";
+                      	echo "<script>window.location= 'adminallproduct.php'</script>";
+                      }
                       $imgQuery = "SELECT `image` FROM `images` WHERE postId = $id";
                       $imgres = $conn->query($imgQuery);
 
@@ -268,11 +277,11 @@ $id = $_GET['id'];
 						while($image = $imgres->fetch_assoc()){
 							//connect::debug($image);
 							//echo "<div class='slick3 gallery-lb'>";
-								echo "<div class='item-slick3' data-thumb='PostImg/$image[image]'>";
+								echo "<div class='item-slick3' data-thumb='postimg/$image[image]'>";
 									echo "<div class='wrap-pic-w pos-relative'>";
-										echo "<img src='PostImg/$image[image]' alt='IMG-PRODUCT' height='550px' width='306px'>";
+										echo "<img src='postimg/$image[image]' alt='IMG-PRODUCT' height='550px' width='306px'>";
 
-										echo "<a class='flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04' href='PostImg/$image[image]'>";
+										echo "<a class='flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04' href='postimg/$image[image]'>";
 											echo "<i class='fa fa-expand'></i>";
 										echo "</a>";
 									echo "</div>";

@@ -1,7 +1,12 @@
 <?php 
 include 'conn.php';
-$id = $_GET['id'];
+if(!(isset($_GET['id'])) || $_GET['id'] == ""){
+	header("location: userallproduct.php");
+}else{
+	$id = $_GET['id'];
+}	
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

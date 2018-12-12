@@ -240,9 +240,9 @@ if(!(isset($_SESSION['AID']))){
 				<div class="dis-none panel-search w-full p-t-10 p-b-15">
 					<div class="bor8 dis-flex p-l-15">
 					<form action="" method="get">
-						<div class="hidden-submit"><input type="submit" value="" name="submitBtn" tabindex="-1"/></div>
+						<div class="hidden-submit"><input type="submit" value="" style="display: none;" name="submitBtn" tabindex="-1"/></div>
 						<i class="zmdi zmdi-search" style="display: inline-block;"></i>
-					<input class="mtext-107 cl2 size-114 plh2 p-r-300" name="inputTxt" style="display: inline-block;" type="text" pattern="[a-z A-Z 0-9]{3,15}" maxlength="15" name="search-product" placeholder="Search">
+					<input class="mtext-107 cl2 size-114 plh2 p-r-300" name="inputTxt" style="display: inline-block;" type="text" pattern="[a-z A-Z 0-9]{3,20}" maxlength="20" name="search-product" placeholder="Search">
 					</form>
 					</div>	
 				</div>
@@ -254,7 +254,12 @@ if(!(isset($_SESSION['AID']))){
                     if(!(isset($_GET['inputTxt']))){
                     	$_GET['inputTxt'] = "";
                     }
-                    $input = $_GET['inputTxt'];
+                    if(isset($_GET['inputTxt'])){
+                    	//$filtered = filter_var($_GET['inputTxt'], FILTER_SANITIZE_STRING);
+                    	$escaped = $conn->real_escape_string($_GET['inputTxt']);
+                    	$input = addcslashes($escaped, '%_');	
+                    	//$input = $_GET['inputTxt'];
+                    }
                     
                       $q = "SELECT DISTINCT (p.postId), i.image ,p.postName, p.postType, p.postPrice, p.postDate, i.image from images i RIGHT JOIN postad p ON i.postId = p.postId WHERE p.postCategory = 'women' AND  postName LIKE '%$input%' GROUP BY p.postId";
         			$res = $conn->query($q); 
