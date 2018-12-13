@@ -57,8 +57,8 @@
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="index.php" class="logo">
+						<img src="images/icons/LOGO1.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -68,7 +68,7 @@
 								<a href="index.php">Home</a>
 							</li>
 
-						<li  class="active-menu">
+						<li>
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
@@ -101,7 +101,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php"><img src="images/icons/LOGO1.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -156,7 +156,7 @@
 					</span>
 				</li>
 
-				<li>
+				<li >
 					<a href="about.php">About</a>
 				</li>
 
@@ -169,7 +169,7 @@
     </header>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-03.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			About
 		</h2>
@@ -183,19 +183,15 @@
 				<div class="col-md-7 col-lg-8">
 					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
 						<h3 class="mtext-111 cl2 p-b-16">
-							Our Story
+							About Us
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
+							Dream Collection 1 entered the realm of fashion in 2015 as a small design house. Despite working with minimal setup Dream Collection 1  gaining tremendous appreciation from clients. With this as inspiration along with his own passion to create exquisite couture, the brand Noman Ali ventured into a full-fledged fashion house. From modest beginnings, Noman Ali is now a thriving business run by a dynamic duo, each one bringing their own expertise to the table.
 						</p>
 
 						<p class="stext-113 cl6 p-b-26">
-							Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. 
-						</p>
-
-						<p class="stext-113 cl6 p-b-26">
-							Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+							The House of Dream Collection 1 is an insignia of style and sophistication. Its philosophy is to create elegant and chic bridals & couture wear. Meticulous handwork, intricate embroidery, coupled with impeccable finishing and attention to detail makes every outfit breathtaking. Continuously delivering unique designs year after year sets Noman Ali as one of the most sought after brand in the fashion industry. 
 						</p>
 					</div>
 				</div>
@@ -203,7 +199,7 @@
 				<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
 					<div class="how-bor1 ">
 						<div class="hov-img0">
-							<img src="images/about-01.jpg" alt="IMG">
+							<img src="images/about2.jpg" alt="IMG">
 						</div>
 					</div>
 				</div>
@@ -217,7 +213,9 @@
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+							The energy of a rainbow breaks through an aura of simplicity. Drawing inspiration from the myriad colors it displays, the vibrancy it contains, the spirit it exhibits, and the awe it creates, we introduce to you Dream Collction 1!<br>
+                            From vivid to subtle hues, Dream Collection1 is all set to add color to your life. With contemporary designs and trendy cuts, the collection is nothing less than art. Dare to raise your fashion bar high, explore our diverse collection, and bring out the fashion best in you!<br>
+                            Dream Collection1 works with a spectrum of fabrics from cotton, voile, chikan and jacquard, to karandi chiffons, silks, cotton net, French net and other pure materials. Dream Collection 1 is fond of working with intricate back motifs and uses both urban and classic silhouettes. Dream Collection 1 is renowned for his exquisite Resham embroidery and color shading in his creations
 						</p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
@@ -235,7 +233,7 @@
 				<div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
 					<div class="how-bor2">
 						<div class="hov-img0">
-							<img src="images/about-02.jpg" alt="IMG">
+							<img src="images/about-0.jpg" alt="IMG">
 						</div>
 					</div>
 				</div>

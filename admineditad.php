@@ -92,15 +92,15 @@ if(!(isset($_GET['adId'])) || $_GET['adId'] == ""){
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="adminallproduct.php" class="logo">
+						<img src="images/icons/adminlogo.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
                         
 						<ul class="main-menu">
-                              <li  class="active-menu">
+                              <li>
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="adminallproduct.php">All Products</a></li>
@@ -122,7 +122,7 @@ if(!(isset($_GET['adId'])) || $_GET['adId'] == ""){
 						<i class="fa fa-angle-down" aria-hidden="true"></i>
 					</span>
 							</li>
-                          <li>
+                          <li   class="active-menu">
 								<a href="adminfabricdetail.php">Post AD</a>
 							</li>
 
@@ -156,7 +156,7 @@ if(!(isset($_GET['adId'])) || $_GET['adId'] == ""){
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="adminallproduct.php"><img src="images/icons/adminlogo.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -241,7 +241,7 @@ if(!(isset($_GET['adId'])) || $_GET['adId'] == ""){
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-03.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Edit Fabric Details
 		</h2>

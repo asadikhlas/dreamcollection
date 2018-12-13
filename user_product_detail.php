@@ -72,8 +72,8 @@ if(!(isset($_GET['id'])) || $_GET['id'] == ""){
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="index.php" class="logo">
+						<img src="images/icons/LOGO1.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -116,7 +116,7 @@ if(!(isset($_GET['id'])) || $_GET['id'] == ""){
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php"><img src="images/icons/LOGO1.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -286,11 +286,7 @@ if(!(isset($_GET['id'])) || $_GET['id'] == ""){
                          
 					</div>
                         <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-								<div class="flex-m bor9 p-r-10 m-r-11">
-									<button href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist" name="wishTxt">
-										<i class="zmdi zmdi-favorite"></i>
-									</button>
-								</div>
+								
 
 								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
 									<i class="fa fa-facebook"></i>

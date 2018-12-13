@@ -57,8 +57,8 @@
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="index.php" class="logo">
+						<img src="images/icons/LOGO1.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -68,7 +68,7 @@
 								<a href="index.php">Home</a>
 							</li>
 
-						<li  class="active-menu">
+						<li >
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
@@ -82,11 +82,11 @@
 							</li>
 							
 
-							<li class="active-menu">
+							<li>
 								<a href="about.php">About</a>
 							</li>
 
-							<li>
+							<li   class="active-menu">
 								<a href="contact.php">Contact</a>
 							</li>
 						</ul>
@@ -101,7 +101,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php"><img src="images/icons/LOGO1.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -125,17 +125,6 @@
 					</div>
 				</li>
 
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Noman Ali
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-                                0314-2304355
-						</a>
-					</div>
-				</li>
 			</ul>
 			<ul class="main-menu-m">
 				<li>
@@ -156,7 +145,7 @@
 					</span>
 				</li>
 
-				<li>
+				<li >
 					<a href="about.php">About</a>
 				</li>
 
@@ -170,7 +159,7 @@
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-03.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Contact
 		</h2>
@@ -182,23 +171,26 @@
 		<div class="container">
 			<div class="flex-w flex-tr">
 				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form>
+					<form method="post" action="php/contact.php" name="cform" id="cform">
 						<h4 class="mtext-105 cl2 txt-center p-b-30">
 							Send Us A Message
 						</h4>
+                        <div class="bor8 m-b-20 how-pos4-parent">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" id="name" placeholder="Your Name">
+							<img class="how-pos4 pointer-none" src="images/icons/icon-heart-01.png" alt="ICON">
+						</div>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" name="email" id="email" placeholder="Your Email Address">
 							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON">
 						</div>
 
 						<div class="bor8 m-b-30">
-							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?"></textarea>
+							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="comments" id="comments." placeholder="How Can We Help?"></textarea>
 						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
-							Submit
-						</button>
+						<input type="submit" id="submi" name="send" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" value="Send your query">
+						<div id="simple-msg"></div>
 					</form>
 				</div>
 
@@ -214,7 +206,7 @@
 							</span>
 
 							<p class="stext-115 cl6 size-213 p-t-18">
-								Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+								Shop NO, 202 1st Floor, Haroon Shopping Mall Sakhi Hasan
 							</p>
 						</div>
 					</div>
@@ -230,7 +222,9 @@
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								+1 800 1236879
+								<i class="fa fa-whatsapp">
+						0314-2304355
+					</i>
 							</p>
 						</div>
 					</div>
@@ -257,9 +251,7 @@
 	
 	
 	<!-- Map -->
-	<div class="map">
-		<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
-	</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2889820389187!2d67.05830728244054!3d24.9562807892035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340906e62e605%3A0xf7541f13843c8374!2sHaroon+Shopping+Mall!5e0!3m2!1sen!2s!4v1544539022396" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
 

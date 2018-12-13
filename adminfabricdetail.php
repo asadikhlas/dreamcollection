@@ -56,7 +56,6 @@ class Post{
         return $this->postDesc;
     }
     public function upload_image(){
-      $id = $_SESSION['user'];
       $conn = connect::connected();
       $q = "SELECT `postId` FROM `postad` ORDER BY `postId` DESC";
       $res = $conn->query($q);
@@ -112,11 +111,11 @@ class Post{
             }
         }
         else{
-            echo "<script>window.location = 'uadminallproduct.php?submit=fail';</script>";
+            echo "<script>window.location = 'adminallproduct.php?submit=fail';</script>";
             die();
         }
       }
-      echo "<script>window.location = 'uadminallproduct.php?submit=success';</script>";
+      echo "<script>window.location = 'adminallproduct.php?submit=success';</script>";
       //$q = ""
     }
     
@@ -206,15 +205,15 @@ $obj->set_post_category($_POST['category']);
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="adminallproduct.php" class="logo">
+						<img src="images/icons/adminlogo.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
                         
 						<ul class="main-menu">
-                              <li  class="active-menu">
+                              <li>
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="adminallproduct.php">All Products</a></li>
@@ -236,7 +235,7 @@ $obj->set_post_category($_POST['category']);
 						<i class="fa fa-angle-down" aria-hidden="true"></i>
 					</span>
 							</li>
-                          <li>
+                          <li   class="active-menu">
 								<a href="adminfabricdetail.php">Post AD</a>
 							</li>
 
@@ -270,7 +269,7 @@ $obj->set_post_category($_POST['category']);
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="adminallproduct.php"><img src="images/icons/adminlogo.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -356,7 +355,7 @@ $obj->set_post_category($_POST['category']);
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-03.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Submit Fabric Details
 		</h2>
@@ -364,16 +363,6 @@ $obj->set_post_category($_POST['category']);
 
 
 	<!-- Content page -->
-    <?php 
-      if(!(isset($_GET['submit']))){
-        $_GET['submit'] = "";
-      }
-      if($_GET['submit'] == "imgGreater"){
-        echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Maximum 5 Images Can Be Selected!</div><br>";
-      }elseif($_GET['submit'] == "imgLesser"){
-        echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Minimum 3 Images Can Be Selected!</div><br>";
-      }
-     ?>
     
     
 	<section class="bg0 p-t-104 p-b-116">
@@ -415,7 +404,7 @@ $obj->set_post_category($_POST['category']);
                         <div class="bor8 m-b-30">
                          <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" required="" pattern="[a-z A-Z.0-9]{3,550}" maxlength="550" class="form-control py-2"  name="desc"></textarea>
                             </div>
-                        <p>Choose any three Fabric Images</p><BR>
+                        <p>Choose minimum three and maximum five Fabric Images</p><BR>
                          <input type="file" name="files[]" id="files" accept=".jpg, .png, .PNG, .JPG" multiple="" required="required"/>
 
                         <br><br>

@@ -71,8 +71,8 @@ if(isset($_GET['submit']) == false){
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					<a href="adminallproduct.php" class="logo">
+						<img src="images/icons/adminlogo.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -135,7 +135,7 @@ if(isset($_GET['submit']) == false){
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="adminallproduct.php"><img src="images/icons/adminlogo.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -238,6 +238,11 @@ if(isset($_GET['submit']) == false){
           }elseif($_GET['submit'] == "formatError"){
         echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Selected File Has Invalid Format.. Only png And jpeg Formats Are Supported!</div><br>";
     	  }
+        elseif($_GET['submit'] == "imgGreater"){
+        echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Maximum 5 Images Can Be   Selected!</div><br>";
+      }elseif($_GET['submit'] == "imgLesser"){
+        echo "<div class='alert alert-danger' role='alert' style='width: 100%; text-align: center; margin: 0 auto 0 auto'>Minimum 3 Images Can Be Selected!</div><br>";
+      }
           ?>
 
 	<!-- Product -->

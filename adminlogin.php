@@ -40,42 +40,66 @@ if(isset($_SESSION['AID'])){
 </head>
 <body class="animsition">
 	
-	<!-- Header -->
+<!-- Header -->
 	<header class="header-v4">
 		<!-- Header desktop -->
-
-            <div class="top-bar">
+		<div class="container-menu-desktop">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
+							0314-2304355
 						</a>
 					</div>
 				</div>
 			</div>
 
+			<div class="wrap-menu-desktop how-shadow1">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="index.php" class="logo">
+						<img src="images/icons/LOGO1.png" alt="IMG-LOGO">
+					</a>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li>
+								<a href="index.php">Home</a>
+							</li>
+
+						
+							
+
+							<li>
+								<a href="about.php">About</a>
+							</li>
+
+							<li>
+								<a href="contact.php">Contact</a>
+							</li>
+						</ul>
+					</div>	
+
+				
+				</nav>
+			</div>	
+		</div>
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php"><img src="images/icons/LOGO1.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -91,60 +115,50 @@ if(isset($_SESSION['AID'])){
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
+			
 	<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						All Kinds of Fancy and Cottons Suits Stich & Unstitch
 					</div>
 				</li>
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
+							Noman Ali
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
+                                0314-2304355
 						</a>
 					</div>
 				</li>
 			</ul>
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Home</a>
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
+					<a href="index.php">Home</a>
+					
+				</li>
+
+				
+
+				<li>
+					<a href="about.php">About</a>
 				</li>
 
 				<li>
-					<a href="product.html">Shop</a>
-				</li>
-
-				<li>
-					<a href="about.html">About</a>
-				</li>
-
-				<li>
-					<a href="contact.html">Contact</a>
+					<a href="contact.php">Contact</a>
 				</li>
 			</ul>
 		</div>
-	</header>
+
+    </header>
 
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-03.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Admin Login
 		</h2>

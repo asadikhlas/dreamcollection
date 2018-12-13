@@ -1,7 +1,7 @@
 <!DOCTphp>
 <html lang="en">
 <head>
-	<title>Home 03</title>
+	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -45,18 +45,18 @@
 				<nav class="limiter-menu-desktop p-l-45">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo2.png" alt="IMG-LOGO">
+					<a href="index.php" class="logo">
+						<img src="images/icons/LOGO4.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li>
+							<li   class="active-menu">
 								<a href="index.php">Home</a>
 							</li>
 
-						<li  class="active-menu">
+						<li>
 								<a href="#" >Products</a>
 								<ul class="sub-menu">
 									<li><a href="userallproduct.php">All Products</a></li>
@@ -90,7 +90,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php"><img src="images/icons/LOGO1.png" alt="IMG-LOGO"></a>
 			</div>
 
 			
@@ -144,7 +144,30 @@
 	<section class="section-slide">
 		<div class="wrap-slick1 rs2-slick1">
 			<div class="slick1">
-				<div class="item-slick1 bg-overlay1" style="background-image: url(images/slide-05.jpg);" data-thumb="images/thumb-01.jpg" data-caption="Women’s Wear">
+                <div class="item-slick1 bg-overlay1" style="background-image: url(images/dreamcollection.png);" data-thumb="images/dreamcollection.png">
+					<div class="container h-full">
+						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
+								<span class="ltext-202 txt-center cl0 respon2">
+									Try it, wear it, love it. Addicted to fashion.
+								</span>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+								<h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
+									New arrivals
+								</h2>
+							</div>
+								
+							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+								<a href="userallproduct.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item-slick1 bg-overlay1" style="background-image: url(images/women.jpg);" data-thumb="images/women.jpg" data-caption="Women & Bridal Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
@@ -160,7 +183,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="usermen.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								<a href="userwomen.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
 									Shop Now
 								</a>
 							</div>
@@ -168,7 +191,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 bg-overlay1" style="background-image: url(images/slide-06.jpg);" data-thumb="images/thumb-02.jpg" data-caption="Men’s Wear">
+				<div class="item-slick1 bg-overlay1" style="background-image: url(images/men.png);" data-thumb="images/men.png" data-caption="Men’s Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
@@ -192,7 +215,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 bg-overlay1" style="background-image: url(images/slide-07.jpg);" data-thumb="images/thumb-03.jpg" data-caption="Kid’s Wear">
+				<div class="item-slick1 bg-overlay1" style="background-image: url(images/kid.jpg);" data-thumb="images/kid.jpg" data-caption="Kid’s Wear">
 					<div class="container h-full">
 						<div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
@@ -229,7 +252,7 @@
 				<div class="col-md-6 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img src="images/banner-04.jpg" alt="IMG-BANNER">
+						<img src="images/womenpic.jpg" alt="IMG-BANNER">
 
 						<a href="userwomen.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
@@ -250,7 +273,7 @@
 				<div class="col-md-6 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img src="images/banner-05.jpg" alt="IMG-BANNER">
+						<img src="images/menpic.jpg" alt="IMG-BANNER">
 
 						<a href="usermen.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
@@ -271,7 +294,7 @@
 <div class="col-md-6 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img src="images/banner-05.jpg" alt="IMG-BANNER">
+						<img src="images/kidpic.jpg" alt="IMG-BANNER">
 
 						<a href="userkid.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
